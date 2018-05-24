@@ -31,7 +31,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="학습하기"/>
                                 <connections>
-                                    <segue destination="Cxf-if-LOc" kind="show" id="M6p-7L-xvS"/>
+                                    <segue destination="pfO-di-dP8" kind="show" id="2BZ-fQ-cro"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="나라 맞추기 게임" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2y-IZ-ht2">
@@ -80,6 +80,42 @@
             </objects>
             <point key="canvasLocation" x="2117.5999999999999" y="-763.26836581709154"/>
         </scene>
+        <!--Study View Controller-->
+        <scene sceneID="zXg-wW-Rz5">
+            <objects>
+                <viewController id="pfO-di-dP8" customClass="studyViewController" customModule="countrygame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c5u-zJ-rft">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="32X-xp-Aue">
+                                <rect key="frame" x="0.0" y="272" width="375" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="c5u-zJ-rft" id="cke-CC-3Kn"/>
+                                    <outlet property="delegate" destination="c5u-zJ-rft" id="xFV-Q1-xvg"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ce-8G-PxE">
+                                <rect key="frame" x="172" y="531" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="시작"/>
+                                <connections>
+                                    <segue destination="6tx-lm-cu0" kind="show" id="MZB-ys-0bD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="dv5-oa-oSP"/>
+                    </view>
+                    <connections>
+                        <outlet property="pickerView" destination="32X-xp-Aue" id="abZ-RI-GXr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fhe-X8-0qr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2115" y="2"/>
+        </scene>
         <!--전체보기-->
         <scene sceneID="t8a-Zb-SIJ">
             <objects>
@@ -122,31 +158,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qmg-iX-fp1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3450" y="-790"/>
-        </scene>
-        <!--Study-->
-        <scene sceneID="oRe-Y9-Yai">
-            <objects>
-                <viewController title="Study" id="Cxf-if-LOc" customClass="ViewController" customModule="countrygame" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="PQu-4n-yZe">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GUI-HI-hum">
-                                <rect key="frame" x="0.0" y="277" width="375" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="H5f-eB-nNZ"/>
-                    </view>
-                    <connections>
-                        <outlet property="pickerView" destination="GUI-HI-hum" id="gOA-VW-nbp"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mbv-u4-rcz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2118" y="90"/>
+            <point key="canvasLocation" x="3127" y="1"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="phG-ku-JxQ">
