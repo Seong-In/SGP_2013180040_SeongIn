@@ -10,10 +10,17 @@ import UIKit
 
 class studyViewController: UIViewController,UIPickerViewDataSource, UIPickerViewDelegate {
 
+    @IBAction func search(_ sender: Any) {
+        
+    }
+    @IBAction func doneToPickerViewController(segue:UIStoryboardSegue){
+        
+    }
+    @IBOutlet weak var searchbutton: UIButton!
     @IBOutlet weak var pickerView: UIPickerView!
-    var pickerDataSource = ["전체보기","10개씩보기","20개씩보기","원하는 만큼보가","검색해서보기"]
+    var pickerDataSource = ["전체보기","10개씩보기","20개씩보기","원하는 만큼보가"]
     
-    var url : String = "http://apis.data.go.kr/1262000/CountryBasicService/getCountryBasicList?serviceKey=ULx0dmA5vWHvXJ4vC79V9c9i2suuEGqXRJdfniXk4p6%2FV9IooCh7SmChiFUm9zmHn0%2BIrCETAP813RCG1le8Dw%3D%3D&numOfRows=10&pageSize=10&pageNo="
+    var url : String = "http://apis.data.go.kr/1262000/CountryBasicService/getCountryBasicList?serviceKey=ULx0dmA5vWHvXJ4vC79V9c9i2suuEGqXRJdfniXk4p6%2FV9IooCh7SmChiFUm9zmHn0%2BIrCETAP813RCG1le8Dw%3D%3D&numOfRows=197&pageSize=197&pageNo=1&startPage=1"
     var pageSize : Int = 10
     var pageNo : Int = 1
     
@@ -30,8 +37,28 @@ class studyViewController: UIViewController,UIPickerViewDataSource, UIPickerView
         return pickerDataSource[row]
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
+        if row == 0 {
+          
+        } else if row == 1{
+            
+        } else if row == 2{
+            
+        } else {
+            
+        }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToTableView"{
+            if let navController = segue.destination as? UINavigationController {
+                if let wTableViewController = navController.topViewController as?
+                    wholeTableViewController{
+                    wTableViewController.url = url
+                }
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.pickerView.delegate = self;

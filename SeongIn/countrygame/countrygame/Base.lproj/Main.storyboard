@@ -19,17 +19,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZt-zY-sSz">
-                                <rect key="frame" x="161" y="414" width="52" height="50"/>
+                                <rect key="frame" x="135" y="414" width="104" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="게임하기"/>
+                                <state key="normal" title="게임하기" backgroundImage="그림1.png"/>
                                 <connections>
                                     <segue destination="fbO-xf-IWa" kind="show" id="h8c-hx-vxs"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jEa-RK-r7M">
-                                <rect key="frame" x="161" y="508" width="52" height="30"/>
+                                <rect key="frame" x="135" y="484" width="104" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="학습하기"/>
+                                <state key="normal" title="학습하기" backgroundImage="그림1.png"/>
                                 <connections>
                                     <segue destination="pfO-di-dP8" kind="show" id="2BZ-fQ-cro"/>
                                 </connections>
@@ -41,6 +41,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6H4-vU-eBe">
+                                <rect key="frame" x="135" y="554" width="104" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="검색하기" backgroundImage="그림1.png"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -54,7 +59,7 @@
         <!--Game-->
         <scene sceneID="ymj-Yx-so3">
             <objects>
-                <viewController title="Game" id="fbO-xf-IWa" sceneMemberID="viewController">
+                <viewController title="Game" id="fbO-xf-IWa" customClass="gameViewController" customModule="countrygame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E2V-Lq-GX4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,10 +80,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="nAC-aL-RMK"/>
                     </view>
+                    <connections>
+                        <outlet property="countryimage" destination="ohI-jk-uu0" id="QX5-Fi-vsJ"/>
+                        <outlet property="countryname" destination="S9T-jR-Lzh" id="kkZ-WZ-BEr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mBr-qF-2PN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2117.5999999999999" y="-763.26836581709154"/>
+            <point key="canvasLocation" x="2338" y="-1132"/>
         </scene>
         <!--Study View Controller-->
         <scene sceneID="zXg-wW-Rz5">
@@ -101,7 +110,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="시작"/>
                                 <connections>
-                                    <segue destination="6tx-lm-cu0" kind="show" id="MZB-ys-0bD"/>
+                                    <action selector="search:" destination="pfO-di-dP8" eventType="touchUpInside" id="Y7s-SV-tdK"/>
+                                    <segue destination="6tx-lm-cu0" kind="show" identifier="segueToTableView" id="MZB-ys-0bD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -110,16 +120,17 @@
                     </view>
                     <connections>
                         <outlet property="pickerView" destination="32X-xp-Aue" id="abZ-RI-GXr"/>
+                        <outlet property="searchbutton" destination="1ce-8G-PxE" id="dlx-YS-aRl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fhe-X8-0qr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2115" y="2"/>
+            <point key="canvasLocation" x="2337" y="-349"/>
         </scene>
         <!--전체보기-->
         <scene sceneID="t8a-Zb-SIJ">
             <objects>
-                <tableViewController title="전체보기" id="6tx-lm-cu0" sceneMemberID="viewController">
+                <tableViewController title="전체보기" id="6tx-lm-cu0" customClass="wholeTableViewController" customModule="countrygame" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="V16-U1-1wp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -155,10 +166,13 @@
                             <outlet property="delegate" destination="6tx-lm-cu0" id="yCY-6U-0rW"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="tbData" destination="V16-U1-1wp" id="dsD-hE-vxN"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qmg-iX-fp1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3127" y="1"/>
+            <point key="canvasLocation" x="3488.8000000000002" y="-349.47526236881561"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="phG-ku-JxQ">
@@ -176,7 +190,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GBl-cU-TVh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133.59999999999999" y="-564.46776611694156"/>
+            <point key="canvasLocation" x="500" y="-577"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="그림1.png" width="254" height="108"/>
+    </resources>
 </document>
