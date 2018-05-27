@@ -45,6 +45,9 @@
                                 <rect key="frame" x="135" y="554" width="104" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="검색하기" backgroundImage="그림1.png"/>
+                                <connections>
+                                    <segue destination="2R0-J1-lyQ" kind="show" id="RVp-W5-8nN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -87,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mBr-qF-2PN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2338" y="-1132"/>
+            <point key="canvasLocation" x="2337" y="-1418"/>
         </scene>
         <!--Study View Controller-->
         <scene sceneID="zXg-wW-Rz5">
@@ -111,7 +114,7 @@
                                 <state key="normal" title="시작"/>
                                 <connections>
                                     <action selector="search:" destination="pfO-di-dP8" eventType="touchUpInside" id="Y7s-SV-tdK"/>
-                                    <segue destination="6tx-lm-cu0" kind="show" identifier="segueToTableView" id="MZB-ys-0bD"/>
+                                    <segue destination="6tx-lm-cu0" kind="show" id="yNF-Uy-p9j"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -125,7 +128,43 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fhe-X8-0qr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2337" y="-349"/>
+            <point key="canvasLocation" x="2337" y="-577"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="6uL-gP-ebz">
+            <objects>
+                <viewController title="Search" id="2R0-J1-lyQ" customClass="SearchViewController" customModule="countrygame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Q6-Ba-dWA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Wap-TY-EI2">
+                                <rect key="frame" x="0.0" y="461" width="375" height="206"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fGM-za-No8">
+                                <rect key="frame" x="87" y="70" width="200" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="fdfdsfff" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8UH-dH-LIb">
+                                <rect key="frame" x="87" y="262" width="176" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="SLd-90-M65"/>
+                    </view>
+                    <connections>
+                        <outlet property="name" destination="8UH-dH-LIb" id="28v-Xw-4Em"/>
+                        <outlet property="simage" destination="fGM-za-No8" id="Nzx-Sm-bY5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pxp-r4-TzI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2280.8000000000002" y="254.12293853073464"/>
         </scene>
         <!--전체보기-->
         <scene sceneID="t8a-Zb-SIJ">
@@ -136,7 +175,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="4qC-cZ-CQ0" detailTextLabel="ly9-yy-bQY" style="IBUITableViewCellStyleSubtitle" id="7cI-Ky-MxB">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="4qC-cZ-CQ0" detailTextLabel="ly9-yy-bQY" style="IBUITableViewCellStyleSubtitle" id="7cI-Ky-MxB">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7cI-Ky-MxB" id="ups-6A-rUt">
@@ -167,12 +206,12 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="tbData" destination="V16-U1-1wp" id="dsD-hE-vxN"/>
+                        <outlet property="tbData" destination="V16-U1-1wp" id="QaR-QA-vT4"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qmg-iX-fp1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3488.8000000000002" y="-349.47526236881561"/>
+            <point key="canvasLocation" x="3385" y="-577"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="phG-ku-JxQ">
