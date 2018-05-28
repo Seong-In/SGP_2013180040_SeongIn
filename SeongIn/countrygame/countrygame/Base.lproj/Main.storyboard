@@ -31,7 +31,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="학습하기" backgroundImage="그림1.png"/>
                                 <connections>
-                                    <segue destination="pfO-di-dP8" kind="show" id="2BZ-fQ-cro"/>
+                                    <segue destination="5qk-jm-WJr" kind="show" id="2BZ-fQ-cro"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="나라 맞추기 게임" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2y-IZ-ht2">
@@ -108,27 +108,30 @@
                                     <outlet property="delegate" destination="c5u-zJ-rft" id="xFV-Q1-xvg"/>
                                 </connections>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ce-8G-PxE">
-                                <rect key="frame" x="172" y="531" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="시작"/>
-                                <connections>
-                                    <action selector="search:" destination="pfO-di-dP8" eventType="touchUpInside" id="Y7s-SV-tdK"/>
-                                    <segue destination="6tx-lm-cu0" kind="show" id="yNF-Uy-p9j"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dv5-oa-oSP"/>
                     </view>
+                    <navigationItem key="navigationItem" id="cr0-yG-bTe">
+                        <barButtonItem key="leftBarButtonItem" title="뒤로가기" id="z0Q-A0-qaq">
+                            <connections>
+                                <segue destination="MBK-Hh-l4t" kind="unwind" unwindAction="doneToPickerViewControllerWithSegue:" id="wEi-Ba-GjY"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="들어가기" id="QPv-5r-LRy">
+                            <connections>
+                                <segue destination="BPc-kq-vrs" kind="show" identifier="segueToTableView" id="S7Z-r4-sUB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="pickerView" destination="32X-xp-Aue" id="abZ-RI-GXr"/>
-                        <outlet property="searchbutton" destination="1ce-8G-PxE" id="dlx-YS-aRl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fhe-X8-0qr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="MBK-Hh-l4t" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2337" y="-577"/>
+            <point key="canvasLocation" x="3276" y="-577.06146926536735"/>
         </scene>
         <!--Search-->
         <scene sceneID="6uL-gP-ebz">
@@ -153,11 +156,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6p-2n-Cw0">
+                                <rect key="frame" x="267" y="333" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="checkbutton:" destination="2R0-J1-lyQ" eventType="touchUpInside" id="coU-xf-Ccn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="SLd-90-M65"/>
                     </view>
                     <connections>
+                        <outlet property="check" destination="L6p-2n-Cw0" id="H2L-W4-6UD"/>
                         <outlet property="name" destination="8UH-dH-LIb" id="28v-Xw-4Em"/>
                         <outlet property="simage" destination="fGM-za-No8" id="Nzx-Sm-bY5"/>
                     </connections>
@@ -205,13 +217,21 @@
                             <outlet property="delegate" destination="6tx-lm-cu0" id="yCY-6U-0rW"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="qEe-XS-cGK">
+                        <barButtonItem key="leftBarButtonItem" title="이전으로" id="Jhu-XT-8VG">
+                            <connections>
+                                <segue destination="4Ak-aA-Uge" kind="unwind" unwindAction="doneToPickerViewControllerWithSegue:" id="Wei-kN-OKb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tbData" destination="V16-U1-1wp" id="QaR-QA-vT4"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qmg-iX-fp1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="4Ak-aA-Uge" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3385" y="-577"/>
+            <point key="canvasLocation" x="5143.1999999999998" y="-600.44977511244383"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="phG-ku-JxQ">
@@ -229,7 +249,43 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GBl-cU-TVh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="500" y="-577"/>
+            <point key="canvasLocation" x="-10" y="-577"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OZk-9p-LxL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5qk-jm-WJr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jlj-ko-akM">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pfO-di-dP8" kind="relationship" relationship="rootViewController" id="GVh-bN-Bdk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="14p-B8-76u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2336.8000000000002" y="-577.06146926536735"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xsm-oF-VDc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BPc-kq-vrs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="E6i-oA-u4i">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6tx-lm-cu0" kind="relationship" relationship="rootViewController" id="Zqq-ix-toC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ps7-ox-FyV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4294" y="-600"/>
         </scene>
     </scenes>
     <resources>

@@ -9,7 +9,10 @@
 import UIKit
 
 class studyViewController: UIViewController,UIPickerViewDataSource, UIPickerViewDelegate {
-
+    
+    
+    
+    
     @IBAction func search(_ sender: Any) {
         
     }
@@ -18,11 +21,15 @@ class studyViewController: UIViewController,UIPickerViewDataSource, UIPickerView
     }
     @IBOutlet weak var searchbutton: UIButton!
     @IBOutlet weak var pickerView: UIPickerView!
-    var pickerDataSource = ["전체보기","10개씩보기","20개씩보기","원하는 만큼보가"]
+    var pickerDataSource = ["전체보기","10개씩보기","20개씩보기","원하는 만큼보기"]
+    var numOfRows : Int = 0
+    var pageSize : Int = 0
+    var pageNo : Int = 0
+    var starPage : Int = 0
     
-    var url : String = "http://apis.data.go.kr/1262000/CountryBasicService/getCountryBasicList?serviceKey=ULx0dmA5vWHvXJ4vC79V9c9i2suuEGqXRJdfniXk4p6%2FV9IooCh7SmChiFUm9zmHn0%2BIrCETAP813RCG1le8Dw%3D%3D&numOfRows=197&pageSize=197&pageNo=1&startPage=1"
-    var pageSize : Int = 10
-    var pageNo : Int = 1
+    var url : String = "http://apis.data.go.kr/1262000/CountryBasicService/getCountryBasicList?serviceKey=ULx0dmA5vWHvXJ4vC79V9c9i2suuEGqXRJdfniXk4p6%2FV9IooCh7SmChiFUm9zmHn0%2BIrCETAP813RCG1le8Dw%3D%3D&"
+    
+   
     
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -38,13 +45,27 @@ class studyViewController: UIViewController,UIPickerViewDataSource, UIPickerView
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if row == 0 {
+            numOfRows = 197
+            pageSize = 197
+            pageNo = 1
+            starPage = 1
           
         } else if row == 1{
+            numOfRows = 10
+            pageSize = 10
+            pageNo = 1
+            starPage = 1
             
         } else if row == 2{
-            
+            numOfRows = 20
+            pageSize = 20
+            pageNo = 1
+            starPage = 1
         } else {
-            
+            numOfRows = 5
+            pageSize = 5
+            pageNo = 1
+            starPage = 1
         }
     }
     
@@ -53,7 +74,7 @@ class studyViewController: UIViewController,UIPickerViewDataSource, UIPickerView
             if let navController = segue.destination as? UINavigationController {
                 if let wTableViewController = navController.topViewController as?
                     wholeTableViewController{
-                    wTableViewController.url = url
+                    wTableViewController.url = url + "numOfRows=" + String(numOfRows) + "&pageSize=" + String(pageSize) + "&pageNo=" + String(pageNo) + "&startPage=" + String(starPage)
                 }
             }
         }
@@ -61,6 +82,7 @@ class studyViewController: UIViewController,UIPickerViewDataSource, UIPickerView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.pickerView.delegate = self;
         self.pickerView.dataSource = self;
 

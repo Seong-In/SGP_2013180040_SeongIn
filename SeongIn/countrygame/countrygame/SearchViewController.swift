@@ -10,20 +10,33 @@ import UIKit
 
 class SearchViewController: UIViewController {
 
+    @IBOutlet weak var check: UIButton!
     @IBOutlet weak var simage: UIImageView!
     @IBOutlet weak var name: UITextView!
     
-    
+    @IBAction func checkbutton(_ sender: Any) {
+         sname = name.text
+        if(sname == "가나다")
+        {
+            simage.image = UIImage(named: "그림1.png")
+            
+        } else {
+            simage.image = UIImage(named: "그림2.png")
+        }
+    }
+    var sname : String = ""
     
     
     
     override func viewDidLoad() {
-        name.text = " ddd"
-        if let url = URL(string: "http://cafefiles.naver.net/20121211_227/fhrhcjsrnr_1355153389025C3iba_JPEG/%C5%C2%B1%D8%B1%E2%C0%CF%B7%AF%BD%BA%C6%AE4.jpg"){
+        //name.text = " ddd"
+       // sname = name.text
+        print(sname)
+       /* if let url = URL(string: "http://cafefiles.naver.net/20121211_227/fhrhcjsrnr_1355153389025C3iba_JPEG///%C5%C2%B1%D8%B1%E2%C0%CF%B7%AF%BD%BA%C6%AE4.jpg"){
             if let data = try? Data(contentsOf: url ){
                 simage.image = UIImage(data: data)
             }
-        }
+        }*/
         
        
         super.viewDidLoad()
