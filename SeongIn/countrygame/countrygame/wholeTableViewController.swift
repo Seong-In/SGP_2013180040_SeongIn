@@ -9,7 +9,8 @@
 import UIKit
 
 class wholeTableViewController: UITableViewController,XMLParserDelegate {
-
+    
+    
     
     @IBOutlet var tbData: UITableView!
     
@@ -49,9 +50,9 @@ class wholeTableViewController: UITableViewController,XMLParserDelegate {
     }
     
     func parser(_ parser: XMLParser, foundCharacters string: String) {
-        if element.isEqual(to: "countryName"){
+        if element.isEqual(to: "countryEnName"){
             title1.append(string)
-        } else if element.isEqual(to: "countryEnName"){
+        } else if element.isEqual(to: "countryName"){
             date.append(string)
         } else if element.isEqual(to: "imgUrl"){
             imageur1.append(string)

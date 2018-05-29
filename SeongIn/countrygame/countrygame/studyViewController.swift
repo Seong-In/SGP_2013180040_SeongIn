@@ -21,15 +21,16 @@ class studyViewController: UIViewController,UIPickerViewDataSource, UIPickerView
     }
     @IBOutlet weak var searchbutton: UIButton!
     @IBOutlet weak var pickerView: UIPickerView!
+    
+    @IBOutlet weak var wantnum: UITextView!
     var pickerDataSource = ["전체보기","10개씩보기","20개씩보기","원하는 만큼보기"]
-    var numOfRows : Int = 0
-    var pageSize : Int = 0
+    var numOfRows : String = ""
+    var pageSize : String = ""
     var pageNo : Int = 0
     var starPage : Int = 0
     
+    //var url1 : String = "http://apis.data.go.kr/9710000/NationalAssemblyInfoService/getMemberCurrStateList?serviceKey=ULx0dmA5vWHvXJ4vC79V9c9i2suuEGqXRJdfniXk4p6%2FV9IooCh7SmChiFUm9zmHn0%2BIrCETAP813RCG1le8Dw%3D%3D&"
     var url : String = "http://apis.data.go.kr/1262000/CountryBasicService/getCountryBasicList?serviceKey=ULx0dmA5vWHvXJ4vC79V9c9i2suuEGqXRJdfniXk4p6%2FV9IooCh7SmChiFUm9zmHn0%2BIrCETAP813RCG1le8Dw%3D%3D&"
-    
-   
     
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -45,27 +46,33 @@ class studyViewController: UIViewController,UIPickerViewDataSource, UIPickerView
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if row == 0 {
-            numOfRows = 197
-            pageSize = 197
+            wantnum.isScrollEnabled = false
+            numOfRows = "197"
+            pageSize = "197"
             pageNo = 1
             starPage = 1
           
         } else if row == 1{
-            numOfRows = 10
-            pageSize = 10
-            pageNo = 1
-            starPage = 1
+            wantnum.isScrollEnabled = false
+            numOfRows = "10"
+            pageSize = "10"
+            pageNo = Int((arc4random() % 20) + 1)
+            starPage = Int((arc4random() % 20) + 1)
             
         } else if row == 2{
-            numOfRows = 20
-            pageSize = 20
-            pageNo = 1
-            starPage = 1
+            wantnum.isScrollEnabled = false
+            numOfRows = "20"
+            pageSize = "20"
+            pageNo = Int((arc4random() % 10) + 1)
+            starPage = Int((arc4random() % 10) + 1)
         } else {
-            numOfRows = 5
-            pageSize = 5
-            pageNo = 1
-            starPage = 1
+            wantnum.isScrollEnabled = true
+            numOfRows = wantnum.text
+            pageSize = wantnum.text
+            pageNo = Int((arc4random() % 10) + 1)
+            starPage = Int((arc4random() % 10) + 1)
+         
+            
         }
     }
     

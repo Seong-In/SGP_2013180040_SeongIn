@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import Foundation
 
+let FontHUD = UIFont(name: "comic andy", size: 60.0)
 class ViewController: UIViewController {
 
+    @IBOutlet weak var titlelabel: UILabel!
     @IBAction func doneToPickerViewController(segue:UIStoryboardSegue){
         
     }
@@ -17,6 +20,7 @@ class ViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
        
         // Do any additional setup after loading the view, typically from a nib.
