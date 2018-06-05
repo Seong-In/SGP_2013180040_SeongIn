@@ -9,17 +9,19 @@
 import UIKit
 import Foundation
 
-let FontHUD = UIFont(name: "comic andy", size: 60.0)
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var titlelabel: UILabel!
     @IBAction func doneToPickerViewController(segue:UIStoryboardSegue){
-        
     }
     
     
     
+    
+    
     override func viewDidLoad() {
+        titlelabel.font = FontHUD
         
         super.viewDidLoad()
        
@@ -27,6 +29,7 @@ class ViewController: UIViewController {
     }
 
     override func didReceiveMemoryWarning() {
+        
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }

@@ -16,10 +16,12 @@ class SearchViewController: UIViewController,XMLParserDelegate {
     @IBOutlet weak var name: UITextView!
     @IBOutlet weak var Detail: UITextView!
     
+    var countryname_utf8 = ""
     @IBAction func checkbutton(_ sender: Any) {
         sname = name.text
         beginParsing()
-        if(sname == String(date))
+        print(countryname_utf8)
+        if(sname == String(title1)||sname == String(date))
         {
             if let url = URL(string: String(imageur1)){
                 if let data = try? Data(contentsOf: url ){
@@ -42,10 +44,12 @@ class SearchViewController: UIViewController,XMLParserDelegate {
     var date = NSMutableString()
     var detail = NSMutableString()
     var imageur1 = NSMutableString()
+    
     func beginParsing()
     {
-        
-        url = "http://apis.data.go.kr/1262000/CountryBasicService/getCountryBasicList?serviceKey=ULx0dmA5vWHvXJ4vC79V9c9i2suuEGqXRJdfniXk4p6%2FV9IooCh7SmChiFUm9zmHn0%2BIrCETAP813RCG1le8Dw%3D%3D&numOfRows=1&pageSize=1&pageNo=1&startPage=1&countryEnName=" + sname
+       
+        countryname_utf8 = sname.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+        url = "http://apis.data.go.kr/1262000/CountryBasicService/getCountryBasicList?serviceKey=ULx0dmA5vWHvXJ4vC79V9c9i2suuEGqXRJdfniXk4p6%2FV9IooCh7SmChiFUm9zmHn0%2BIrCETAP813RCG1le8Dw%3D%3D&numOfRows=1&pageSize=1&pageNo=1&startPage=1&countryName=" + countryname_utf8 
         posts = []
         parser = XMLParser(contentsOf:(URL(string:url))!)!
         parser.delegate = self
