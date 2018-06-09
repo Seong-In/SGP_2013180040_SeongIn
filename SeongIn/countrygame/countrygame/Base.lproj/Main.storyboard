@@ -103,6 +103,79 @@
                                     <segue destination="fbO-xf-IWa" kind="show" id="Cyp-eh-9Pg"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ND-w0-fbT">
+                                <rect key="frame" x="323" y="76" width="36" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="help.png"/>
+                                <connections>
+                                    <action selector="helpbutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gBS-Vm-Dgh"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="help2.png" translatesAutoresizingMaskIntoConstraints="NO" id="F2m-qG-afC">
+                                <rect key="frame" x="12" y="225" width="351" height="359"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game1.png" translatesAutoresizingMaskIntoConstraints="NO" id="0zP-3J-wp1">
+                                <rect key="frame" x="30" y="237" width="51" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="search1.png" translatesAutoresizingMaskIntoConstraints="NO" id="n2F-aJ-lsd">
+                                <rect key="frame" x="91" y="509" width="51" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="study1.png" translatesAutoresizingMaskIntoConstraints="NO" id="mgZ-BG-Qk8">
+                                <rect key="frame" x="91" y="423" width="51" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="원하는 나라를 검색" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIB-Od-cmv">
+                                <rect key="frame" x="150" y="522" width="127" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="많은 나라  보기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29l-Ma-g2B">
+                                <rect key="frame" x="158" y="438" width="102" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="easy : 2분동안 10개 맞추기, 5번 틀리면 종료 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1b-ck-TSO">
+                                <rect key="frame" x="30" y="295" width="241" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="normal : 2분동안 20개 맞추기, 7번 틀리면 종료" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVZ-PZ-FWZ">
+                                <rect key="frame" x="25" y="325" width="252" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="hard : 2분동안 맞추기,3번틀리면 종료, pass10번 제한" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84X-2N-peK">
+                                <rect key="frame" x="25" y="352" width="287" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ga9-Gp-5lX">
+                                <rect key="frame" x="111" y="252" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="easy, normal,hard 선택 플레이" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSa-WY-IZ1">
+                                <rect key="frame" x="89" y="252" width="218" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -110,9 +183,19 @@
                     <navigationItem key="navigationItem" id="gcj-T5-Vui"/>
                     <connections>
                         <outlet property="easybutton" destination="xwN-fB-Gmc" id="Omz-d7-2U9"/>
+                        <outlet property="easytext" destination="O1b-ck-TSO" id="tmv-cO-PMS"/>
+                        <outlet property="gameimage" destination="0zP-3J-wp1" id="Ff5-ws-fHl"/>
+                        <outlet property="gametext" destination="vSa-WY-IZ1" id="Vu2-gj-cf7"/>
                         <outlet property="gimage" destination="uvC-Mr-4Fb" id="Lrk-6X-heh"/>
                         <outlet property="hardbutton" destination="D5C-EO-5yd" id="Kz5-aS-bfP"/>
+                        <outlet property="hardtext" destination="84X-2N-peK" id="KrK-ZQ-IdZ"/>
+                        <outlet property="himage" destination="F2m-qG-afC" id="2vZ-Rb-SKg"/>
+                        <outlet property="normaltext" destination="KVZ-PZ-FWZ" id="i2Y-Ry-RfT"/>
                         <outlet property="normarlbutton" destination="bUi-TZ-XCc" id="vgn-DY-V3O"/>
+                        <outlet property="searchimage" destination="n2F-aJ-lsd" id="emq-kO-aFB"/>
+                        <outlet property="searchtext" destination="qIB-Od-cmv" id="kV6-qh-1Bz"/>
+                        <outlet property="studyimage" destination="mgZ-BG-Qk8" id="6dq-r7-Yck"/>
+                        <outlet property="studytext" destination="29l-Ma-g2B" id="gM6-pQ-R4C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -190,6 +273,39 @@
                                 <rect key="frame" x="44" y="431" width="171" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="win2.png" translatesAutoresizingMaskIntoConstraints="NO" id="xpz-So-aEu">
+                                <rect key="frame" x="16" y="540" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fail2.png" translatesAutoresizingMaskIntoConstraints="NO" id="5zA-wf-tt8">
+                                <rect key="frame" x="16" y="580" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pass2.png" translatesAutoresizingMaskIntoConstraints="NO" id="kNl-Xf-KKw">
+                                <rect key="frame" x="16" y="620" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58T-IV-Epf">
+                                <rect key="frame" x="52" y="550" width="30" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="comicandy" family="comic andy" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eC-ud-TBJ">
+                                <rect key="frame" x="52" y="590" width="30" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="comicandy" family="comic andy" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ds0-cF-80M">
+                                <rect key="frame" x="52" y="630" width="30" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="comicandy" family="comic andy" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.48613516115320493" green="0.48960137086490374" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="nAC-aL-RMK"/>
@@ -197,6 +313,9 @@
                     <connections>
                         <outlet property="answer" destination="XYn-Kn-eBn" id="ANs-g9-XNc"/>
                         <outlet property="countryimage" destination="ohI-jk-uu0" id="QX5-Fi-vsJ"/>
+                        <outlet property="easynum" destination="58T-IV-Epf" id="qgG-eh-zTM"/>
+                        <outlet property="failnum" destination="7eC-ud-TBJ" id="zl2-09-BHG"/>
+                        <outlet property="passnum" destination="ds0-cF-80M" id="xvp-7o-8wm"/>
                         <outlet property="scorelabel" destination="dLZ-OZ-qF2" id="1Gy-za-CGT"/>
                         <outlet property="start" destination="hOF-Cs-jwj" id="lty-UD-XKQ"/>
                         <outlet property="startpass" destination="D4Y-lx-Zfn" id="SHn-nG-bJv"/>
@@ -292,7 +411,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8UH-dH-LIb">
-                                <rect key="frame" x="40" y="589" width="46" height="22"/>
+                                <rect key="frame" x="40" y="589" width="127" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -334,7 +453,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pxp-r4-TzI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2337" y="238"/>
+            <point key="canvasLocation" x="2336.8000000000002" y="237.93103448275863"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="3Fh-Yr-eXZ">
@@ -540,6 +659,39 @@
                                     <action selector="passbutton:" destination="hzK-vm-haK" eventType="touchUpInside" id="Sz9-FV-hbg"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="win2.png" translatesAutoresizingMaskIntoConstraints="NO" id="7ee-yZ-vJG">
+                                <rect key="frame" x="16" y="540" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fail2.png" translatesAutoresizingMaskIntoConstraints="NO" id="VDZ-Iq-4Gl">
+                                <rect key="frame" x="16" y="580" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pass2.png" translatesAutoresizingMaskIntoConstraints="NO" id="PRF-oa-kdt">
+                                <rect key="frame" x="16" y="620" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTc-lE-6ip">
+                                <rect key="frame" x="52" y="550" width="30" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="comicandy" family="comic andy" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFL-y6-bZ8">
+                                <rect key="frame" x="52" y="630" width="30" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="comicandy" family="comic andy" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KeE-7N-5mh">
+                                <rect key="frame" x="52" y="590" width="30" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="comicandy" family="comic andy" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="4et-NJ-BUD"/>
@@ -547,11 +699,14 @@
                     <connections>
                         <outlet property="answer" destination="ahC-nk-wVa" id="g5z-Fk-ZBd"/>
                         <outlet property="countryimage" destination="e30-3D-c9j" id="492-bO-BGD"/>
+                        <outlet property="failnum" destination="KeE-7N-5mh" id="Fit-8Y-8DW"/>
+                        <outlet property="passnum" destination="TFL-y6-bZ8" id="hoq-ct-Mfx"/>
                         <outlet property="scorelabel" destination="zL8-q7-cyi" id="Rnb-fp-hV9"/>
                         <outlet property="start" destination="IIt-Vn-0JD" id="YQc-d7-qAp"/>
                         <outlet property="startpass" destination="Vvc-sO-cSq" id="6Yd-wN-mjs"/>
                         <outlet property="tbData" destination="YQS-Mr-W8H" id="LiJ-Q6-IUq"/>
                         <outlet property="timerlabel" destination="C7J-Ui-Kbf" id="xjf-Sg-Ues"/>
+                        <outlet property="winnum" destination="zTc-lE-6ip" id="ojI-x0-uTp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="er0-1Z-aNN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -585,9 +740,9 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AjL-V3-dgg">
-                                <rect key="frame" x="295" y="423" width="42" height="39"/>
+                                <rect key="frame" x="232" y="431" width="44" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="pass.png"/>
+                                <state key="normal" backgroundImage="check.png"/>
                                 <connections>
                                     <action selector="answerbutton:" destination="hHt-ws-RKw" eventType="touchUpInside" id="ZiT-fK-RrI"/>
                                 </connections>
@@ -599,14 +754,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkj-qD-CVl">
-                                <rect key="frame" x="232" y="431" width="44" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="check.png"/>
-                                <connections>
-                                    <action selector="passbutton:" destination="hHt-ws-RKw" eventType="touchUpInside" id="NwC-rw-cP9"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ltl-CH-8wU">
                                 <rect key="frame" x="25" y="75" width="125" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -629,6 +776,47 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkj-qD-CVl">
+                                <rect key="frame" x="295" y="423" width="42" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="pass.png"/>
+                                <connections>
+                                    <action selector="passbutton:" destination="hHt-ws-RKw" eventType="touchUpInside" id="NwC-rw-cP9"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="win2.png" translatesAutoresizingMaskIntoConstraints="NO" id="j3Z-pL-3Q7">
+                                <rect key="frame" x="16" y="540" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fail2.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZYR-SB-JuH">
+                                <rect key="frame" x="16" y="580" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pass2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Afb-4c-49O">
+                                <rect key="frame" x="16" y="620" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oK-we-45J">
+                                <rect key="frame" x="52" y="550" width="30" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="comicandy" family="comic andy" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36H-oL-4j8">
+                                <rect key="frame" x="52" y="630" width="30" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="comicandy" family="comic andy" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULQ-mV-3Ep">
+                                <rect key="frame" x="52" y="590" width="30" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="comicandy" family="comic andy" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.80815925766243835" green="0.81392154291015373" blue="0.83120839865329954" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Jri-Sj-ger"/>
@@ -636,6 +824,9 @@
                     <connections>
                         <outlet property="answer" destination="EYx-3v-02L" id="kxi-ap-PRg"/>
                         <outlet property="countryimage" destination="vju-2y-cEs" id="RcE-Rs-MPd"/>
+                        <outlet property="easynum" destination="3oK-we-45J" id="ebo-7U-KnI"/>
+                        <outlet property="failnum" destination="ULQ-mV-3Ep" id="u6e-Yz-RuT"/>
+                        <outlet property="passnum" destination="36H-oL-4j8" id="qdT-zB-RBX"/>
                         <outlet property="scorelabel" destination="1fN-Q5-rMP" id="LVX-UO-urj"/>
                         <outlet property="start" destination="cgL-i0-HeH" id="KS8-SK-2NM"/>
                         <outlet property="startpass" destination="hkj-qD-CVl" id="T8n-qe-JFp"/>
@@ -654,12 +845,17 @@
         <image name="cafefiles.naver.net.jpeg" width="740" height="555"/>
         <image name="check.png" width="272" height="272"/>
         <image name="earth.png" width="233" height="235"/>
+        <image name="fail2.png" width="25" height="22"/>
         <image name="game1.png" width="414" height="416"/>
+        <image name="help.png" width="170" height="172"/>
+        <image name="help2.png" width="304" height="249"/>
         <image name="map3.png" width="200" height="200"/>
         <image name="pass.png" width="208" height="208"/>
+        <image name="pass2.png" width="27" height="27"/>
         <image name="search1.png" width="418" height="416"/>
         <image name="search2.png" width="235" height="233"/>
         <image name="study1.png" width="416" height="416"/>
+        <image name="win2.png" width="29" height="35"/>
         <image name="world.png" width="310" height="175"/>
         <image name="그림1.png" width="252" height="106"/>
     </resources>

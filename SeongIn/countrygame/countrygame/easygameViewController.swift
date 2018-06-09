@@ -14,6 +14,9 @@ class easygameViewController: UIViewController,XMLParserDelegate {
     @IBOutlet weak var timerlabel: UILabel!
     @IBOutlet var tbData: UIView!
     @IBOutlet weak var startpass: UIButton!
+    @IBOutlet weak var winnum: UILabel!
+    @IBOutlet weak var passnum: UILabel!
+    @IBOutlet weak var failnum: UILabel!
     
     private var speechRecognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "ko-KR"))!
@@ -39,8 +42,20 @@ class easygameViewController: UIViewController,XMLParserDelegate {
     
     
     @IBAction func passbutton(_ sender: Any) {
+        let startX: CGFloat = ScreenWidth - 100
+        let startY: CGFloat = 430
+        let endY: CGFloat = ScreenHeight
+        
+        let passs = passdustView(frame: CGRect(x: startX, y: startY, width: 10, height: 10))
+        self.view.addSubview(passs)
+        self.view.sendSubview(toBack: passs)
+        
+        UIView.animate(withDuration: 3.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+            passs.center = CGPoint(x: startX, y: endY)
+        }, completion: {(value:Bool) in passs.removeFromSuperview()})
         beginParsing()
         passcounter += 1
+        passnum.text = "x\(passcounter)"
         if(score > 0){
             score -= 1
         }
@@ -69,9 +84,21 @@ class easygameViewController: UIViewController,XMLParserDelegate {
         sname = answer.text
         
         if(sname == String(title1) ){
+            let startX: CGFloat = ScreenWidth - 100
+            let startY: CGFloat = 430
+            let endY: CGFloat = ScreenHeight
+            
+            let wins = windustView(frame: CGRect(x: startX, y: startY, width: 10, height: 10))
+            self.view.addSubview(wins)
+            self.view.sendSubview(toBack: wins)
+            
+            UIView.animate(withDuration: 3.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+                wins.center = CGPoint(x: startX, y: endY)
+            }, completion: {(value:Bool) in wins.removeFromSuperview()})
             
             score += 10
             wincounter += 1
+            winnum.text = "x\(wincounter)"
             beginParsing()
             if let urlr = URL(string: String(imageur1)){
                 if let data = try? Data(contentsOf: urlr ){
@@ -83,11 +110,25 @@ class easygameViewController: UIViewController,XMLParserDelegate {
             
         }
         else{
+            let startX: CGFloat = ScreenWidth - 100
+            let startY: CGFloat = 430
+            let endY: CGFloat = ScreenHeight
+            
+            let fails = faildustView(frame: CGRect(x: startX, y: startY, width: 10, height: 10))
+            self.view.addSubview(fails)
+            self.view.sendSubview(toBack: fails)
+            
+            UIView.animate(withDuration: 3.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+                fails.center = CGPoint(x: startX, y: endY)
+            }, completion: {(value:Bool) in fails.removeFromSuperview()})
             if(score>0)
             {
                 score -= 5
             }
+            
+            
             failcounter += 1
+            failnum.text = "x\(failcounter)"
             audioController.playerEffect(name: SoundWrong)
             beginParsing()
             if let urlr = URL(string: String(imageur1)){
@@ -182,8 +223,13 @@ class easygameViewController: UIViewController,XMLParserDelegate {
         wincounter = 0
         passcounter = 0
         timerlabel.text = " Time :  \(seconds)"
-        scorelabel.text = "\(score)"
-        
+        if(score<=0)
+        {
+            scorelabel.text = "0"
+        }
+        else{
+            scorelabel.text = "\(score)"
+        }
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector:
             #selector(self.subtractTime) , userInfo: nil, repeats: true)
         

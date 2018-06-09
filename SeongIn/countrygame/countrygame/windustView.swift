@@ -1,14 +1,14 @@
 //
-//  StardustView.swift
-//  Anagrams
+//  windustView.swift
+//  countrygame
 //
-//  Created by KPU_GAME on 2018. 5. 28..
-//  Copyright © 2018년 Caroline. All rights reserved.
+//  Created by KPU_GAME on 2018. 6. 9..
+//  Copyright © 2018년 KPU_GAME. All rights reserved.
 //
 
 import UIKit
 
-class StardustView: UIView {
+class windustView: UIView {
     private var emitter: CAEmitterLayer!
     
     override class var layerClass: AnyClass {
@@ -51,5 +51,5 @@ class StardustView: UIView {
         emitter.emitterCells = [emitterCell]
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {self.removeFromSuperview()})
-}
+    }
 }

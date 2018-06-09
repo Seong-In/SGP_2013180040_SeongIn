@@ -1,14 +1,14 @@
 //
-//  StardustView.swift
-//  Anagrams
+//  passdustView.swift
+//  countrygame
 //
-//  Created by KPU_GAME on 2018. 5. 28..
-//  Copyright © 2018년 Caroline. All rights reserved.
+//  Created by KPU_GAME on 2018. 6. 9..
+//  Copyright © 2018년 KPU_GAME. All rights reserved.
 //
 
 import UIKit
 
-class StardustView: UIView {
+class passdustView: UIView {
     private var emitter: CAEmitterLayer!
     
     override class var layerClass: AnyClass {
@@ -31,7 +31,7 @@ class StardustView: UIView {
         if self.superview == nil {
             return
         }
-        let texture: UIImage? = UIImage(named: "win2")
+        let texture: UIImage? = UIImage(named: "pass2")
         assert(texture != nil, "particle image not found")
         let emitterCell = CAEmitterCell()
         
@@ -51,5 +51,5 @@ class StardustView: UIView {
         emitter.emitterCells = [emitterCell]
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {self.removeFromSuperview()})
-}
+    }
 }
