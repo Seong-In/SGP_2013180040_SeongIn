@@ -1,15 +1,15 @@
 //
-//  gameViewController.swift
+//  normalgameViewController.swift
 //  countrygame
 //
-//  Created by KPU_GAME on 2018. 5. 25..
+//  Created by KPU_GAME on 2018. 6. 9..
 //  Copyright © 2018년 KPU_GAME. All rights reserved.
 //
 
 import UIKit
 import Speech
 
-class gameViewController: UIViewController,XMLParserDelegate {
+class normalgameViewController: UIViewController,XMLParserDelegate {
     @IBOutlet weak var scorelabel: UILabel!
     @IBOutlet weak var timerlabel: UILabel!
     @IBOutlet var tbData: UIView!
@@ -27,8 +27,8 @@ class gameViewController: UIViewController,XMLParserDelegate {
     var failcounter = 0
     var passcounter = 0
     var wincounter = 0
-   
-
+    
+    
     var audioController: AudioController
     required init?(coder aDecoder: NSCoder) {
         audioController = AudioController()
@@ -39,21 +39,16 @@ class gameViewController: UIViewController,XMLParserDelegate {
     
     
     @IBAction func passbutton(_ sender: Any) {
-        if(passcounter < 10)
-        {
-            beginParsing()
-        
-            passcounter += 1
-        
-            if(score > 0){
-                score -= 1
-            }
-            if let urlr = URL(string: String(imageur1)){
-                if let data = try? Data(contentsOf: urlr ){
-                    countryimage.image = UIImage(data: data)
-                    audioController.playerEffect(name: SoundDing)
-                    answer.text = ""
-                }
+        beginParsing()
+        passcounter += 1
+        if(score > 0){
+            score -= 1
+        }
+        if let urlr = URL(string: String(imageur1)){
+            if let data = try? Data(contentsOf: urlr ){
+                countryimage.image = UIImage(data: data)
+                audioController.playerEffect(name: SoundDing)
+                answer.text = ""
             }
         }
     }
@@ -101,17 +96,17 @@ class gameViewController: UIViewController,XMLParserDelegate {
                 }
             }
         }
-       
         
         
-    
+        
+        
         
     }
     @IBOutlet weak var answer: UITextView!
     @IBOutlet weak var countryimage: UIImageView!
     
     var sname : String = ""
-   
+    
     var parser = XMLParser()
     var posts = NSMutableArray()
     var elements = NSMutableDictionary()
@@ -184,6 +179,7 @@ class gameViewController: UIViewController,XMLParserDelegate {
         score = 0
         failcounter = 0
         passcounter = 0
+        wincounter = 0
         timerlabel.text = " Time :  \(seconds)"
         scorelabel.text = "\(score)"
         
@@ -194,7 +190,7 @@ class gameViewController: UIViewController,XMLParserDelegate {
     
     func regame()
     {
-        if(seconds == 0 || failcounter == 3){
+        if(seconds == 0 || failcounter == 7 || wincounter == 20 || (failcounter + wincounter + passcounter == 20)){
             timer.invalidate()
             
             let alert = UIAlertController(title: " Time is up!",message: " 정답횟수 : \(wincounter), 틀린횟수 : \(failcounter)   넘어간 횟수 \(passcounter), score : \(score).", preferredStyle:UIAlertControllerStyle.alert)
@@ -210,6 +206,7 @@ class gameViewController: UIViewController,XMLParserDelegate {
         seconds -= 1
         timerlabel.text = "Time:\(seconds)"
         scorelabel.text = "\(score)"
+       
         regame()
     }
     func authorizeSR() {
@@ -291,24 +288,24 @@ class gameViewController: UIViewController,XMLParserDelegate {
         beginParsing()
         super.viewDidLoad()
         //setupGame()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

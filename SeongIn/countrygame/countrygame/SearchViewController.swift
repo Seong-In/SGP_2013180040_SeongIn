@@ -55,6 +55,7 @@ class SearchViewController: UIViewController,XMLParserDelegate {
         parser.delegate = self
         parser.parse()
         tbData.reloadInputViews()
+        
     }
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String])
     {

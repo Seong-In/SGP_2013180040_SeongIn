@@ -11,17 +11,39 @@ import Foundation
 
 
 class ViewController: UIViewController {
+    
+    var imagecnt = true
 
-    @IBOutlet weak var titlelabel: UILabel!
+    @IBOutlet weak var easybutton: UIButton!
+    @IBOutlet weak var normarlbutton: UIButton!
+    
+    @IBOutlet weak var gimage: UIImageView!
+    @IBOutlet weak var hardbutton: UIButton!
+    
+    @IBAction func gamebutton(_ sender: Any) {
+        if(imagecnt == false)
+        {
+            gimage.isHidden = true
+            easybutton.isHidden = true
+            normarlbutton.isHidden = true
+            hardbutton.isHidden = true
+            imagecnt = true
+        }
+        else{
+            gimage.isHidden = false
+            easybutton.isHidden = false
+            normarlbutton.isHidden = false
+            hardbutton.isHidden = false
+            imagecnt = false
+        }
+    }
+    
     @IBAction func doneToPickerViewController(segue:UIStoryboardSegue){
     }
     
-    
-    
-    
+
     
     override func viewDidLoad() {
-        titlelabel.font = FontHUD
         
         super.viewDidLoad()
        
