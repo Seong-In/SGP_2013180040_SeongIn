@@ -120,7 +120,6 @@ class gameViewController: UIViewController,XMLParserDelegate {
             let startY: CGFloat = 430
             let endY: CGFloat = ScreenHeight
             
-            
             if(score>0)
             {
                 score -= 5
@@ -243,7 +242,7 @@ class gameViewController: UIViewController,XMLParserDelegate {
     {
         if(seconds == 0 || failcounter == 3){
             timer.invalidate()
-            
+            audioController.playerEffect(name: Soundbg)
             let alert = UIAlertController(title: " Time is up!",message: " 정답횟수 : \(wincounter), 틀린횟수 : \(failcounter)   넘어간 횟수 \(passcounter), score : \(score).", preferredStyle:UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "continue?",style:UIAlertActionStyle.default, handler:{action in self.setupGame()}))
             alert.addAction(UIAlertAction(title: "cancle",style:UIAlertActionStyle.default))

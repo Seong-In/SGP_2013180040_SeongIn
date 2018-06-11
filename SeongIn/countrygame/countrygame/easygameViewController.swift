@@ -239,7 +239,7 @@ class easygameViewController: UIViewController,XMLParserDelegate {
     {
         if(seconds == 0 || failcounter == 5 || wincounter == 10 || (failcounter + wincounter + passcounter == 10)){
             timer.invalidate()
-            
+            audioController.playerEffect(name: Soundbg)
             let alert = UIAlertController(title: " Time is up!",message: " 정답횟수 : \(wincounter), 틀린횟수 : \(failcounter)   넘어간 횟수 \(passcounter), score : \(score).", preferredStyle:UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "continue?",style:UIAlertActionStyle.default, handler:{action in self.setupGame()}))
             alert.addAction(UIAlertAction(title: "cancle",style:UIAlertActionStyle.default))
@@ -309,8 +309,7 @@ class easygameViewController: UIViewController,XMLParserDelegate {
             var finished = false
             
             if let result = result {
-                self.answer.text =
-                    result.bestTranscription.formattedString
+                self.answer.text = result.bestTranscription.formattedString
                 finished = result.isFinal
             }
             
@@ -337,9 +336,10 @@ class easygameViewController: UIViewController,XMLParserDelegate {
     
     
     override func viewDidLoad() {
-        authorizeSR()
+        
         beginParsing()
         super.viewDidLoad()
+        authorizeSR()
         //setupGame()
         
         // Do any additional setup after loading the view.

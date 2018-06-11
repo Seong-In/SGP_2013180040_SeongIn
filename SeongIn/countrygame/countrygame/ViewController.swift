@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     var helpcnt = true
     private let audioEngine = AVAudioEngine()
     @IBAction func studybutton(_ sender: Any) {
-        
+        audioController.playerEffect(name: Soundbutton)
         
     }
     @IBAction func searchbutton(_ sender: Any) {

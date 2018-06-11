@@ -238,7 +238,7 @@ class normalgameViewController: UIViewController,XMLParserDelegate {
     {
         if(seconds == 0 || failcounter == 7 || wincounter == 20 || (failcounter + wincounter + passcounter == 20)){
             timer.invalidate()
-            
+            audioController.playerEffect(name: Soundbg)
             let alert = UIAlertController(title: " Time is up!",message: " 정답횟수 : \(wincounter), 틀린횟수 : \(failcounter)   넘어간 횟수 \(passcounter), score : \(score).", preferredStyle:UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "continue?",style:UIAlertActionStyle.default, handler:{action in self.setupGame()}))
             alert.addAction(UIAlertAction(title: "cancle",style:UIAlertActionStyle.default))
