@@ -38,6 +38,9 @@
 		77C22EE720CB9AAE00D5DDF6 /* game1.png in Resources */ = {isa = PBXBuildFile; fileRef = 77C22EE520CB9AAD00D5DDF6 /* game1.png */; };
 		77C22EEB20CB9B7400D5DDF6 /* search1.png in Resources */ = {isa = PBXBuildFile; fileRef = 77C22EEA20CB9B7400D5DDF6 /* search1.png */; };
 		77C22EED20CB9F4A00D5DDF6 /* bar3.png in Resources */ = {isa = PBXBuildFile; fileRef = 77C22EEC20CB9F4900D5DDF6 /* bar3.png */; };
+		77EF480720CE135300171B72 /* bgsound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 77EF480420CE135200171B72 /* bgsound.mp3 */; };
+		77EF480820CE135300171B72 /* failsound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 77EF480520CE135200171B72 /* failsound.mp3 */; };
+		77EF480920CE135300171B72 /* success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 77EF480620CE135300171B72 /* success.mp3 */; };
 		77F037EB20CBB53600F6A9C2 /* easygameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F037EA20CBB53600F6A9C2 /* easygameViewController.swift */; };
 		77F037ED20CBB54600F6A9C2 /* normalgameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F037EC20CBB54600F6A9C2 /* normalgameViewController.swift */; };
 		77F037EF20CBBB4A00F6A9C2 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 77F037EE20CBBB4900F6A9C2 /* check.png */; };
@@ -90,6 +93,9 @@
 		77C22EE520CB9AAD00D5DDF6 /* game1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = game1.png; sourceTree = "<group>"; };
 		77C22EEA20CB9B7400D5DDF6 /* search1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search1.png; sourceTree = "<group>"; };
 		77C22EEC20CB9F4900D5DDF6 /* bar3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar3.png; sourceTree = "<group>"; };
+		77EF480420CE135200171B72 /* bgsound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgsound.mp3; sourceTree = "<group>"; };
+		77EF480520CE135200171B72 /* failsound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = failsound.mp3; sourceTree = "<group>"; };
+		77EF480620CE135300171B72 /* success.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = success.mp3; sourceTree = "<group>"; };
 		77F037EA20CBB53600F6A9C2 /* easygameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = easygameViewController.swift; sourceTree = "<group>"; };
 		77F037EC20CBB54600F6A9C2 /* normalgameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = normalgameViewController.swift; sourceTree = "<group>"; };
 		77F037EE20CBBB4900F6A9C2 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
@@ -177,6 +183,9 @@
 				77AF029420B51B3600F7F0F6 /* Info.plist */,
 				777CE1B520B68AD200CF6E64 /* studyViewController.swift */,
 				77AFCCCB20B8135500C6338C /* gameViewController.swift */,
+				77EF480420CE135200171B72 /* bgsound.mp3 */,
+				77EF480520CE135200171B72 /* failsound.mp3 */,
+				77EF480620CE135300171B72 /* success.mp3 */,
 				771E75FD20C4E41300C97A3B /* Comic_Andy.ttf */,
 				77AFCCCD20B817DC00C6338C /* wholeTableViewController.swift */,
 				770B3BE220BAA21C00E3042F /* SearchViewController.swift */,
@@ -258,6 +267,7 @@
 				77C22EEB20CB9B7400D5DDF6 /* search1.png in Resources */,
 				77F037F120CBBD1300F6A9C2 /* pass.png in Resources */,
 				77F037EF20CBBB4A00F6A9C2 /* check.png in Resources */,
+				77EF480920CE135300171B72 /* success.mp3 in Resources */,
 				77F0380120CBC79600F6A9C2 /* help2.png in Resources */,
 				77C22EDD20CB8C5000D5DDF6 /* world.png in Resources */,
 				77C22EDC20CB8C5000D5DDF6 /* earth.png in Resources */,
@@ -267,6 +277,8 @@
 				77499EB020C5201A00F3A192 /* 그림1.png in Resources */,
 				77499EAD20C5201A00F3A192 /* wrong.m4a in Resources */,
 				77C22EE220CB9A1C00D5DDF6 /* bar.png in Resources */,
+				77EF480720CE135300171B72 /* bgsound.mp3 in Resources */,
+				77EF480820CE135300171B72 /* failsound.mp3 in Resources */,
 				77AB20C320BC593C00C9E93D /* cafefiles.naver.net.jpeg in Resources */,
 				77C22EE620CB9AAE00D5DDF6 /* study1.png in Resources */,
 				77499EAF20C5201A00F3A192 /* ding.mp3 in Resources */,

@@ -8,13 +8,20 @@
 
 import UIKit
 import Foundation
-
+import Speech
 
 class ViewController: UIViewController {
     
     var imagecnt = true // 게임 버튼 활성화
     var helpcnt = true
+    private let audioEngine = AVAudioEngine()
 
+    @IBAction func studybutton(_ sender: Any) {
+        audioController.playerEffect(name: Soundbutton)
+    }
+    @IBAction func searchbutton(_ sender: Any) {
+        audioController.playerEffect(name: Soundbutton)
+    }
     @IBOutlet weak var easybutton: UIButton!
     @IBOutlet weak var normarlbutton: UIButton!
     @IBOutlet weak var searchimage: UIImageView!
@@ -30,7 +37,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var hardtext: UILabel!
     @IBOutlet weak var normaltext: UILabel!
     @IBOutlet weak var easytext: UILabel!
+    
+    var audioController: AudioController
+    required init?(coder aDecoder: NSCoder) {
+        audioController = AudioController()
+        audioController.preloadAudioEffects(audioFileNames: AudioEffectFiles)
+        
+        super.init(coder: aDecoder)
+    }
+    
     @IBAction func helpbutton(_ sender: Any) {
+        audioController.playerEffect(name: Soundbutton)
         if(helpcnt == false){
             himage.isHidden = true
             searchtext.isHidden = true
@@ -63,6 +80,7 @@ class ViewController: UIViewController {
         
     }
     @IBAction func gamebutton(_ sender: Any) {
+        audioController.playerEffect(name: Soundbutton)
         if(imagecnt == false)
         {
             gimage.isHidden = true
@@ -88,7 +106,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-       
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 

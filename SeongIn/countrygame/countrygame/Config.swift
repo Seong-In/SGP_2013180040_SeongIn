@@ -17,10 +17,15 @@ let TileMargin: CGFloat = 20
 let FontHUD = UIFont(name: "comic andy", size: 25.0)
 let FontHUDBig = UIFont(name: "comic andy", size: 120.0)
 
-let SoundDing = "ding.mp3"
-let SoundWrong = "wrong.m4a"
-let SoundWin = "win.mp3"
-let AudioEffectFiles = [SoundDing,SoundWrong,SoundWin]
+
+let SoundWrong = "wrong.m4a" // pass 할때 나오는 음
+let SoundWin = "success.mp3" // 맞췄을시 나오는 음
+let Soundfail = "failsound.mp3"  // 틀렸을시 나오는 음
+let Soundbutton = "win.mp3"  // 버튼 누를 시 나오는 음
+let Soundbg = "bgsound.mp3" // 시작화면 배경음
+
+
+let AudioEffectFiles = [Soundfail,SoundWrong,SoundWin,Soundbutton,Soundbg]
 
 
 

@@ -55,6 +55,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="study1.png"/>
                                 <connections>
+                                    <action selector="studybutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WjA-wX-TWf"/>
                                     <segue destination="5qk-jm-WJr" kind="show" id="2BZ-fQ-cro"/>
                                 </connections>
                             </button>
@@ -63,6 +64,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="search1.png"/>
                                 <connections>
+                                    <action selector="searchbutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fhG-Et-xSb"/>
                                     <segue destination="2R0-J1-lyQ" kind="show" id="RVp-W5-8nN"/>
                                 </connections>
                             </button>

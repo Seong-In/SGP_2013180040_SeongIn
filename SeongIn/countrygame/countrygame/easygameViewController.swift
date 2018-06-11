@@ -46,6 +46,10 @@ class easygameViewController: UIViewController,XMLParserDelegate {
         let startY: CGFloat = 430
         let endY: CGFloat = ScreenHeight
         
+        
+        beginParsing()
+        passcounter += 1
+        passnum.text = "x\(passcounter)"
         let passs = passdustView(frame: CGRect(x: startX, y: startY, width: 10, height: 10))
         self.view.addSubview(passs)
         self.view.sendSubview(toBack: passs)
@@ -53,16 +57,13 @@ class easygameViewController: UIViewController,XMLParserDelegate {
         UIView.animate(withDuration: 3.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
             passs.center = CGPoint(x: startX, y: endY)
         }, completion: {(value:Bool) in passs.removeFromSuperview()})
-        beginParsing()
-        passcounter += 1
-        passnum.text = "x\(passcounter)"
         if(score > 0){
             score -= 1
         }
         if let urlr = URL(string: String(imageur1)){
             if let data = try? Data(contentsOf: urlr ){
                 countryimage.image = UIImage(data: data)
-                audioController.playerEffect(name: SoundDing)
+                audioController.playerEffect(name: SoundWrong)
                 answer.text = ""
             }
         }
@@ -88,6 +89,11 @@ class easygameViewController: UIViewController,XMLParserDelegate {
             let startY: CGFloat = 430
             let endY: CGFloat = ScreenHeight
             
+            
+            score += 10
+            wincounter += 1
+            winnum.text = "x\(wincounter)"
+            beginParsing()
             let wins = windustView(frame: CGRect(x: startX, y: startY, width: 10, height: 10))
             self.view.addSubview(wins)
             self.view.sendSubview(toBack: wins)
@@ -95,11 +101,6 @@ class easygameViewController: UIViewController,XMLParserDelegate {
             UIView.animate(withDuration: 3.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
                 wins.center = CGPoint(x: startX, y: endY)
             }, completion: {(value:Bool) in wins.removeFromSuperview()})
-            
-            score += 10
-            wincounter += 1
-            winnum.text = "x\(wincounter)"
-            beginParsing()
             if let urlr = URL(string: String(imageur1)){
                 if let data = try? Data(contentsOf: urlr ){
                     countryimage.image = UIImage(data: data)
@@ -114,13 +115,7 @@ class easygameViewController: UIViewController,XMLParserDelegate {
             let startY: CGFloat = 430
             let endY: CGFloat = ScreenHeight
             
-            let fails = faildustView(frame: CGRect(x: startX, y: startY, width: 10, height: 10))
-            self.view.addSubview(fails)
-            self.view.sendSubview(toBack: fails)
             
-            UIView.animate(withDuration: 3.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
-                fails.center = CGPoint(x: startX, y: endY)
-            }, completion: {(value:Bool) in fails.removeFromSuperview()})
             if(score>0)
             {
                 score -= 5
@@ -129,8 +124,15 @@ class easygameViewController: UIViewController,XMLParserDelegate {
             
             failcounter += 1
             failnum.text = "x\(failcounter)"
-            audioController.playerEffect(name: SoundWrong)
+            audioController.playerEffect(name: Soundfail)
             beginParsing()
+            let fails = faildustView(frame: CGRect(x: startX, y: startY, width: 10, height: 10))
+            self.view.addSubview(fails)
+            self.view.sendSubview(toBack: fails)
+            
+            UIView.animate(withDuration: 3.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+                fails.center = CGPoint(x: startX, y: endY)
+            }, completion: {(value:Bool) in fails.removeFromSuperview()})
             if let urlr = URL(string: String(imageur1)){
                 if let data = try? Data(contentsOf: urlr ){
                     countryimage.image = UIImage(data: data)
@@ -223,13 +225,11 @@ class easygameViewController: UIViewController,XMLParserDelegate {
         wincounter = 0
         passcounter = 0
         timerlabel.text = " Time :  \(seconds)"
-        if(score<=0)
-        {
-            scorelabel.text = "0"
-        }
-        else{
-            scorelabel.text = "\(score)"
-        }
+        scorelabel.text = "\(score)"
+        failnum.text = "x\(failcounter)"
+        passnum.text = "x\(passcounter)"
+        winnum.text = "x\(wincounter)"
+        
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector:
             #selector(self.subtractTime) , userInfo: nil, repeats: true)
         
@@ -252,7 +252,13 @@ class easygameViewController: UIViewController,XMLParserDelegate {
         
         seconds -= 1
         timerlabel.text = "Time:\(seconds)"
-        scorelabel.text = "\(score)"
+        if(score<=0)
+        {
+            scorelabel.text = "0"
+        }
+        else{
+            scorelabel.text = "\(score)"
+        }
         
         regame()
     }

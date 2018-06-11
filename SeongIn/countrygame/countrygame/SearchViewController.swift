@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Speech
 class SearchViewController: UIViewController,XMLParserDelegate {
 
     @IBOutlet var tbData: UIView!
@@ -17,12 +17,21 @@ class SearchViewController: UIViewController,XMLParserDelegate {
     @IBOutlet weak var Detail: UITextView!
     
     var countryname_utf8 = ""
+    private let audioEngine = AVAudioEngine()
+    var audioController: AudioController
+    required init?(coder aDecoder: NSCoder) {
+        audioController = AudioController()
+        audioController.preloadAudioEffects(audioFileNames: AudioEffectFiles)
+        
+        super.init(coder: aDecoder)
+    }
+    
     @IBAction func checkbutton(_ sender: Any) {
         sname = name.text
         beginParsing()
-        print(countryname_utf8)
         if(sname == String(title1)||sname == String(date))
         {
+            audioController.playerEffect(name: Soundbutton)
             if let url = URL(string: String(imageur1)){
                 if let data = try? Data(contentsOf: url ){
                     simage.image = UIImage(data: data)
@@ -31,6 +40,7 @@ class SearchViewController: UIViewController,XMLParserDelegate {
             Detail.text = String(detail)
             
         } else {
+            audioController.playerEffect(name: Soundfail)
             simage.image = UIImage(named: "x.png")
         }
     }
