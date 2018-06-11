@@ -15,9 +15,9 @@ class ViewController: UIViewController {
     var imagecnt = true // 게임 버튼 활성화
     var helpcnt = true
     private let audioEngine = AVAudioEngine()
-
     @IBAction func studybutton(_ sender: Any) {
-        audioController.playerEffect(name: Soundbutton)
+        
+        
     }
     @IBAction func searchbutton(_ sender: Any) {
         audioController.playerEffect(name: Soundbutton)

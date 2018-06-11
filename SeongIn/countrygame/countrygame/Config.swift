@@ -23,7 +23,7 @@ let SoundWin = "success.mp3" // 맞췄을시 나오는 음
 let Soundfail = "failsound.mp3"  // 틀렸을시 나오는 음
 let Soundbutton = "win.mp3"  // 버튼 누를 시 나오는 음
 let Soundbg = "bgsound.mp3" // 시작화면 배경음
-
+var searchname = ""
 
 let AudioEffectFiles = [Soundfail,SoundWrong,SoundWin,Soundbutton,Soundbg]
 

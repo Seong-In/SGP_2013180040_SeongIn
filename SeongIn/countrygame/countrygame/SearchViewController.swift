@@ -16,6 +16,7 @@ class SearchViewController: UIViewController,XMLParserDelegate {
     @IBOutlet weak var name: UITextView!
     @IBOutlet weak var Detail: UITextView!
     
+    
     var countryname_utf8 = ""
     private let audioEngine = AVAudioEngine()
     var audioController: AudioController
@@ -27,9 +28,9 @@ class SearchViewController: UIViewController,XMLParserDelegate {
     }
     
     @IBAction func checkbutton(_ sender: Any) {
-        sname = name.text
+        searchname = name.text
         beginParsing()
-        if(sname == String(title1)||sname == String(date))
+        if(searchname == String(title1)||searchname == String(date))
         {
             audioController.playerEffect(name: Soundbutton)
             if let url = URL(string: String(imageur1)){
@@ -44,6 +45,8 @@ class SearchViewController: UIViewController,XMLParserDelegate {
             simage.image = UIImage(named: "x.png")
         }
     }
+    var mapX = 0.0
+    var mapY = 0.0
     var sname : String = ""
     var url : String = ""
     var parser = XMLParser()
@@ -58,7 +61,7 @@ class SearchViewController: UIViewController,XMLParserDelegate {
     func beginParsing()
     {
        
-        countryname_utf8 = sname.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+        countryname_utf8 = searchname.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
         url = "http://apis.data.go.kr/1262000/CountryBasicService/getCountryBasicList?serviceKey=ULx0dmA5vWHvXJ4vC79V9c9i2suuEGqXRJdfniXk4p6%2FV9IooCh7SmChiFUm9zmHn0%2BIrCETAP813RCG1le8Dw%3D%3D&numOfRows=1&pageSize=1&pageNo=1&startPage=1&countryName=" + countryname_utf8 
         posts = []
         parser = XMLParser(contentsOf:(URL(string:url))!)!
@@ -117,15 +120,18 @@ class SearchViewController: UIViewController,XMLParserDelegate {
     }
     
    
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToMapView" {
+            if let mapViewController = segue.destination as? MapViewController {
+                mapViewController.posts = posts
+            }
+        }
+    }
     
     
     override func viewDidLoad() {
         
-        //name.text = " ddd"
-       // sname = name.text
-      
-      
+       
         
        
         super.viewDidLoad()

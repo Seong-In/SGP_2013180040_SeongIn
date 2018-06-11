@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		770B3BE320BAA21C00E3042F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770B3BE220BAA21C00E3042F /* SearchViewController.swift */; };
+		770C172520CE509F003C8FB9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770C172420CE509F003C8FB9 /* MapViewController.swift */; };
+		770C172720CE5161003C8FB9 /* SearchMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770C172620CE5161003C8FB9 /* SearchMap.swift */; };
 		771E75FE20C4E41400C97A3B /* Comic_Andy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 771E75FD20C4E41300C97A3B /* Comic_Andy.ttf */; };
 		77499EAB20C5201A00F3A192 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77499EA320C5201A00F3A192 /* Config.swift */; };
 		77499EAC20C5201A00F3A192 /* win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 77499EA420C5201A00F3A192 /* win.mp3 */; };
@@ -61,6 +63,8 @@
 
 /* Begin PBXFileReference section */
 		770B3BE220BAA21C00E3042F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		770C172420CE509F003C8FB9 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		770C172620CE5161003C8FB9 /* SearchMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMap.swift; sourceTree = "<group>"; };
 		771E75FD20C4E41300C97A3B /* Comic_Andy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Comic_Andy.ttf; sourceTree = "<group>"; };
 		77499EA320C5201A00F3A192 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		77499EA420C5201A00F3A192 /* win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = win.mp3; sourceTree = "<group>"; };
@@ -195,6 +199,8 @@
 				77F0381020CBDC9700F6A9C2 /* windustView.swift */,
 				77F0381220CBDCC000F6A9C2 /* faildustView.swift */,
 				77F0381420CBDCD800F6A9C2 /* passdustView.swift */,
+				770C172420CE509F003C8FB9 /* MapViewController.swift */,
+				770C172620CE5161003C8FB9 /* SearchMap.swift */,
 			);
 			path = countrygame;
 			sourceTree = "<group>";
@@ -316,6 +322,8 @@
 				77F037EB20CBB53600F6A9C2 /* easygameViewController.swift in Sources */,
 				77499EAE20C5201A00F3A192 /* AudioController.swift in Sources */,
 				77F0381320CBDCC000F6A9C2 /* faildustView.swift in Sources */,
+				770C172520CE509F003C8FB9 /* MapViewController.swift in Sources */,
+				770C172720CE5161003C8FB9 /* SearchMap.swift in Sources */,
 				77AF028920B51B3500F7F0F6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -438,7 +438,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="map3.png"/>
                                 <connections>
-                                    <segue destination="7eh-3j-eWh" kind="show" id="j1q-7G-f2g"/>
+                                    <segue destination="7eh-3j-eWh" kind="show" identifier="segueToMapView" id="j1q-7G-f2g"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -457,16 +457,16 @@
             </objects>
             <point key="canvasLocation" x="2336.8000000000002" y="237.93103448275863"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="3Fh-Yr-eXZ">
             <objects>
-                <viewController id="7eh-3j-eWh" sceneMemberID="viewController">
+                <viewController id="7eh-3j-eWh" customClass="MapViewController" customModule="countrygame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P7S-on-w1B">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Wap-TY-EI2">
-                                <rect key="frame" x="0.0" y="93" width="375" height="455"/>
+                                <rect key="frame" x="50" y="156" width="274" height="355"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                         </subviews>
@@ -474,10 +474,13 @@
                         <viewLayoutGuide key="safeArea" id="xsY-n5-hPh"/>
                     </view>
                     <navigationItem key="navigationItem" id="dLS-9k-q8D"/>
+                    <connections>
+                        <outlet property="mapView" destination="Wap-TY-EI2" id="Rx7-EJ-HuX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f2b-RE-5RW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3473" y="238"/>
+            <point key="canvasLocation" x="3472.8000000000002" y="237.93103448275863"/>
         </scene>
         <!--전체보기-->
         <scene sceneID="t8a-Zb-SIJ">
