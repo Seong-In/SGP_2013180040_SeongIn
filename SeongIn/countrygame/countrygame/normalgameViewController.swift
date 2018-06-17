@@ -78,7 +78,7 @@ class normalgameViewController: UIViewController,XMLParserDelegate {
             }
         }
         start.isEnabled = false
-        try! startSession()
+        //try! startSession()
         
     }
     @IBAction func answerbutton(_ sender: Any) {

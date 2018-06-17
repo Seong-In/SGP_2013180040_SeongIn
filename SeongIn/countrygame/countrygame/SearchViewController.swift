@@ -38,7 +38,11 @@ class SearchViewController: UIViewController,XMLParserDelegate {
                     simage.image = UIImage(data: data)
                 }
             }
-            Detail.text = String(detail)
+            //Detail.text = String(detail).deleteHTMLTags(tags: ["div","br","&nbsp;"])
+            
+            Detail.text = String(detail).replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil).replacingOccurrences(of: "&nbsp;", with: "", options: .regularExpression, range: nil)
+            
+        
             
         } else {
             audioController.playerEffect(name: Soundfail)
@@ -129,11 +133,9 @@ class SearchViewController: UIViewController,XMLParserDelegate {
     }
     
     
+    
     override func viewDidLoad() {
         
-       
-        
-       
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -156,3 +158,25 @@ class SearchViewController: UIViewController,XMLParserDelegate {
     */
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -78,7 +78,7 @@ class easygameViewController: UIViewController,XMLParserDelegate {
             }
         }
         start.isEnabled = false
-        try! startSession()
+        //try! startSession()
         
     }
     @IBAction func answerbutton(_ sender: Any) {
@@ -108,7 +108,6 @@ class easygameViewController: UIViewController,XMLParserDelegate {
                     answer.text = ""
                 }
             }
-            
         }
         else{
             let startX: CGFloat = ScreenWidth - 100
