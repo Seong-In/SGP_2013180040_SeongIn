@@ -31,6 +31,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var gimage: UIImageView! // game 선택 이미지
     @IBOutlet weak var hardbutton: UIButton!
     
+    @IBOutlet weak var asklabel: UILabel!
     @IBOutlet weak var gametext: UILabel!
     @IBOutlet weak var searchtext: UILabel!
     @IBOutlet weak var studytext: UILabel!
@@ -59,7 +60,7 @@ class ViewController: UIViewController {
             normaltext.isHidden = true
             hardtext.isHidden = true
             gametext.isHidden = true
-            
+            asklabel.isHidden = true
             helpcnt = true
         }
         else{
@@ -73,7 +74,7 @@ class ViewController: UIViewController {
             normaltext.isHidden = false
             hardtext.isHidden = false
             gametext.isHidden = false
-            
+            asklabel.isHidden = false
             helpcnt = false
             
         }

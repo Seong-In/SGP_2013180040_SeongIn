@@ -114,7 +114,7 @@
                                 </connections>
                             </button>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="help2.png" translatesAutoresizingMaskIntoConstraints="NO" id="F2m-qG-afC">
-                                <rect key="frame" x="12" y="225" width="351" height="359"/>
+                                <rect key="frame" x="12" y="225" width="351" height="399"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game1.png" translatesAutoresizingMaskIntoConstraints="NO" id="0zP-3J-wp1">
@@ -178,12 +178,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="문의사항 (ask): ahstmxj101@gmail.com/naver.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCu-pM-pOO">
+                                <rect key="frame" x="84" y="593" width="275" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="gcj-T5-Vui"/>
                     <connections>
+                        <outlet property="asklabel" destination="HCu-pM-pOO" id="vkH-Ea-5YN"/>
                         <outlet property="easybutton" destination="xwN-fB-Gmc" id="Omz-d7-2U9"/>
                         <outlet property="easytext" destination="O1b-ck-TSO" id="tmv-cO-PMS"/>
                         <outlet property="gameimage" destination="0zP-3J-wp1" id="Ff5-ws-fHl"/>
@@ -425,6 +433,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="그림1.png" translatesAutoresizingMaskIntoConstraints="NO" id="oM7-IV-EAh">
+                                <rect key="frame" x="63" y="301" width="240" height="199"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6p-2n-Cw0">
                                 <rect key="frame" x="234" y="587" width="52" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -441,6 +453,36 @@
                                     <segue destination="7eh-3j-eWh" kind="show" identifier="segueToMapView" id="j1q-7G-f2g"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsq-f4-cqO">
+                                <rect key="frame" x="154" y="358" width="59" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="한글검색">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="Kobutton:" destination="2R0-J1-lyQ" eventType="touchUpInside" id="LiH-bV-RTw"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfL-7l-6yo">
+                                <rect key="frame" x="131" y="419" width="113" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Search English">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="Enbutton:" destination="2R0-J1-lyQ" eventType="touchUpInside" id="9Dy-w1-J3s"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Hr-Iz-hzR">
+                                <rect key="frame" x="300" y="514" width="40" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="setting.png"/>
+                                <connections>
+                                    <action selector="settingbutton:" destination="2R0-J1-lyQ" eventType="touchUpInside" id="DkF-HO-zqr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="SLd-90-M65"/>
@@ -448,7 +490,10 @@
                     <connections>
                         <outlet property="Detail" destination="Dv7-IH-EXU" id="qgc-bB-rtp"/>
                         <outlet property="check" destination="L6p-2n-Cw0" id="H2L-W4-6UD"/>
+                        <outlet property="ensearch" destination="qfL-7l-6yo" id="kFl-DU-C7c"/>
+                        <outlet property="kosearch" destination="dsq-f4-cqO" id="pDb-Jp-PZa"/>
                         <outlet property="name" destination="8UH-dH-LIb" id="28v-Xw-4Em"/>
+                        <outlet property="setting" destination="oM7-IV-EAh" id="dkj-At-Dg8"/>
                         <outlet property="simage" destination="fGM-za-No8" id="Nzx-Sm-bY5"/>
                         <outlet property="tbData" destination="1Q6-Ba-dWA" id="Nbz-Pe-xMu"/>
                     </connections>
@@ -862,6 +907,7 @@
         <image name="pass2.png" width="27" height="27"/>
         <image name="search1.png" width="418" height="416"/>
         <image name="search2.png" width="235" height="233"/>
+        <image name="setting.png" width="414" height="418"/>
         <image name="study1.png" width="416" height="416"/>
         <image name="win2.png" width="29" height="35"/>
         <image name="world.png" width="310" height="175"/>

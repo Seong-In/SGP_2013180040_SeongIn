@@ -84,7 +84,7 @@ class normalgameViewController: UIViewController,XMLParserDelegate {
     @IBAction func answerbutton(_ sender: Any) {
         sname = answer.text
         
-        if(sname == String(title1) ){
+        if(sname == String(title1) || sname == String(date) ){
             let startX: CGFloat = ScreenWidth - 100
             let startY: CGFloat = 430
             let endY: CGFloat = ScreenHeight
